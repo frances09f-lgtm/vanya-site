@@ -38,7 +38,7 @@ home=function(){
  const tile=c=>`<a class="ctile" href="#/collections/${c}"><img src="${src(P.find(p=>p.cat===c).img)}" alt="${CATS[c][0]}"><span>${CATS[c][0]}</span></a>`;
  const pimg=["saree1","fabric2","craft","saree2","stole1"];
  const steps=[["Send Us Your Flowers","Pack and courier your wedding garlands or special flowers to us with care."],["We Carefully Sort the Flowers","Our team gently separates and prepares each petal and leaf."],["Fabric Is Prepared","We prepare the cloth that will carry the natural imprint of your flowers."],["Your Flowers Come to Life Again","Eco-printing transfers the colours of your flowers onto fabric."],["Receive Your Timeless Memory","Your finished piece is sent back to you as a keepsake."]];
- return `<section class="hz" style="background-image:url(${IMG.hero})"><div><h1>${BRAND.toUpperCase()}</h1><p>Rooted in nature, made by hand</p></div></section>
+ return `<section class="hz"><div class="bg" style="background-image:url(${IMG.hero})"></div><div><h1>${BRAND.toUpperCase()}</h1><p>Rooted in nature, made by hand</p></div></section>
  <section class="intro"><div class="in"><h2>Rooted in Nature, Crafted with Purpose</h2><p>${BRAND} is a celebration of craft, sustainability and mindful making. We turn leaves, petals and natural dyes into timeless textiles, blending age-old techniques with contemporary design, so that every piece carries a story and adds value to the wardrobes and homes it joins.</p></div></section>
  <section class="zs a"><h2 class="ct">Shop Our Collections</h2><div class="ctiles">${["saree","fabric","stole","swatch"].map(tile).join("")}</div></section>
  <section class="zs b"><div class="zw wide"><h2 class="big">Fabrics of ${BRAND}</h2><div class="fabw"><button class="arw l" data-sc="-1" aria-label="Previous">&#8249;</button><div class="fabs" id="fabs">${FABRICS.map(f=>`<a class="fabc" href="#/collections/fabric?fabric=${encodeURIComponent(f[0])}"><img loading="lazy" src="${src(f[2])}" alt="${f[0]}"><h3>${f[0]}</h3><p>${f[1]}</p></a>`).join("")}</div><button class="arw r" data-sc="1" aria-label="Next">&#8250;</button></div><div class="cta"><a class="btn" href="#/collections/fabric">Shop now</a></div></div></section>
@@ -60,4 +60,14 @@ renderFooter=function(){
 };
 document.addEventListener("click",e=>{const b=e.target.closest("[data-sc]");if(b){const f=$("#fabs");if(f)f.scrollBy({left:+b.dataset.sc*f.clientWidth*.8,behavior:"smooth"});}});
 renderHeader();renderFooter();route();
+
+function reveal(){
+ if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("go");io.unobserve(e.target);}}),{threshold:.08});
+ document.querySelectorAll("#app .intro .in,#app .zs>h2,#app .zs>.zw>*,#app .zs>.sw>*,#app .zs>.faq>*,#app .zs>.wrap>*,#app .ctile,#app .fabc,#app .st,#app .of,#app .ig4 img,#app .wy,#app .b3>div").forEach(el=>{
+  if(el.closest(".hz")||el.classList.contains("rvz"))return;
+  const sib=[...el.parentNode.children].indexOf(el);el.style.setProperty("--d",Math.min(sib,6)*75+"ms");el.classList.add("rvz");io.observe(el);});
+}
+window.addEventListener("hashchange",()=>setTimeout(reveal,30));
+reveal();
 })();
