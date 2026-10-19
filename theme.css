@@ -75,3 +75,29 @@ footer#ftr{background:#f7f8f3;color:var(--bd);border-top:1px solid #e4e0d4;paddi
 .fz{grid-template-columns:1fr;padding:34px 20px}.soc{justify-content:flex-start;margin-top:26px}
 .wa{width:54px;height:54px;right:14px;bottom:14px}
 }
+/* motion (timings modelled on the reference store's behaviour, own code) */
+header{position:relative}
+@keyframes zdrop{0%{opacity:0;transform:translateY(-1.5rem)}100%{opacity:1;transform:none}}
+@keyframes zkb{0%{transform:scale(1)}100%{transform:scale(1.08)}}
+@keyframes zfade{0%{opacity:0}100%{opacity:1}}
+.hz{overflow:hidden;background:none!important}.hz .bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:zkb 22s ease-in-out infinite alternate}
+.hz:before{z-index:1}.hz div:not(.bg){z-index:2}
+.hz h1,.hz p{opacity:0;animation:zdrop .9s cubic-bezier(0,0,.3,1) .2s forwards}.hz p{animation-delay:.5s}
+#app{animation:zfade .4s ease}
+.sbar.open{animation:zdrop .2s ease}
+.faq details[open] p{animation:zdrop .2s ease}
+.hd2 .ib svg{transition:transform .2s}.hd2 .ib:hover svg{transform:scale(1.07)}
+.btn{transition:transform .5s,box-shadow .5s,background .3s}
+@media(hover:hover){
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(136,48,74,.28)}
+.fabc{transition:transform .3s}.fabc img{transition:transform .3s,box-shadow .3s}.fabc:hover{transform:translateY(-8px)}.fabc:hover img{box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.ig4 img,.b3 img,.sw img{transition:transform .4s}.ig4 img:hover,.b3 img:hover{transform:scale(1.04)}
+.of img,.st img{transition:transform .4s,filter .4s}.of:hover img{transform:scale(1.02)}.st:hover img{filter:grayscale(0)}
+.arw{transition:transform .2s}.arw:hover{transform:scale(1.1)}
+.rvc{transition:transform .3s,box-shadow .3s}.rvc:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.wa{transition:transform .3s}.wa:hover{transform:scale(1.08)}
+}
+.mnav{transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.rvz{opacity:.01;transform:translateY(2rem)}
+.rvz.go{opacity:1;transform:none;transition:opacity .6s cubic-bezier(0,0,.3,1),transform .6s cubic-bezier(0,0,.3,1);transition-delay:var(--d,0ms)}
+@media(prefers-reduced-motion:reduce){.hz .bg,.hz h1,.hz p,#app{animation:none}.hz h1,.hz p{opacity:1}.rvz{opacity:1;transform:none}}
