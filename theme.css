@@ -107,3 +107,12 @@ header{position:relative}
 @media(prefers-reduced-motion:reduce){.hzv{display:none}}
 
 body,.logo,.hz h1,.fz .bn,.mnav .logo{font-family:Jost,'Noto Sans Devanagari',system-ui,sans-serif}
+
+.lfw,.rlw{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;padding:0 20px}
+.lfi{display:grid;grid-template-columns:1.5fr 1fr;gap:12px}.lfi img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}
+.rlw{grid-template-columns:1fr 1.2fr}.rlw video{width:100%;max-width:340px;justify-self:center;aspect-ratio:9/16;background:#000;object-fit:cover}
+.lft h2,.rlt h2{font-size:34px;margin:0 0 14px}.lft p,.rlt p{line-height:1.7;margin:0 0 20px}
+@media(max-width:800px){.lfw,.rlw{grid-template-columns:1fr;gap:24px}.lft h2,.rlt h2{font-size:26px}}
+
+.logo img.lg{height:46px;width:auto;display:block;margin:0 auto}.fz .bn img.lgf{height:64px;width:auto;display:block}.mnav .logo img.lg{height:38px;margin:0}
+@media(max-width:800px){.logo img.lg{height:38px}}
