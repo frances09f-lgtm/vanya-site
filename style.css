@@ -110,4 +110,4 @@ footer form{display:flex;gap:6px}footer input{flex:1;padding:11px;border:0;min-w
  .pd{grid-template-columns:1fr;gap:26px}.co{grid-template-columns:1fr}.sum{position:static;order:-1}.fg{grid-template-columns:1fr 1fr}.sec{padding:46px 0}.sh{font-size:28px;margin-bottom:24px}
  .qa{display:none}
 }
-@media(max-width:560px){.g4{grid-template-columns:1fr 1fr;gap:14px}.steps{grid-template-columns:1fr}.f{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.hero h1{font-size:32px}.pg{gap:18px 10px}.pc h3{font-size:15px}.ib span.lbl{display:none}}
+@media(max-width:560px){.g2{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr;gap:14px}.steps{grid-template-columns:1fr}.f{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.hero h1{font-size:32px}.pg{gap:18px 10px}.pc h3{font-size:15px}.ib span.lbl{display:none}}
