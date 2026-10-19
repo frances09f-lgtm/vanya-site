@@ -98,6 +98,21 @@ footer form{display:flex;gap:6px}footer input{flex:1;padding:11px;border:0;min-w
 .copy{max-width:1400px;margin:34px auto 0;padding:18px 4% 0;border-top:1px solid #3a3a3d;font-size:13px;color:#999}
 #toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:3px;opacity:0;transition:.3s;z-index:70;pointer-events:none}#toast.on{opacity:1;transform:translate(-50%,0)}
 .rv{border:1px solid var(--line);padding:18px;background:#fff}
+
+/* reviews (Mulya-style cards) */
+.rvsub{text-align:center;color:#555;margin:-22px 0 6px;font-size:16px}
+.ravg{text-align:center;margin:14px 0 36px}
+.ravg b{font-size:36px;color:var(--brown);font-weight:600;margin-right:12px}
+.ravg .rvs.big{font-size:22px;vertical-align:6px}
+.ravg i{display:block;font-style:normal;font-size:14px;color:#777;margin-top:4px}
+.rvgrid{max-width:900px;margin-left:auto;margin-right:auto}
+.rvc{background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(60,30,20,.08);padding:26px;text-align:left}
+.rvc .rvh{display:flex;align-items:center;gap:13px;margin-bottom:10px}
+.rva{width:46px;height:46px;border-radius:50%;background:#e8a33d;color:#fff;display:inline-grid;place-items:center;font-size:19px;font-weight:500;flex:none}
+.rvc .rvh b{display:block;font-size:16.5px;font-weight:600}
+.rvc .rvh i{display:block;font-style:normal;font-size:13px;color:#8a8a8a;margin-top:1px}
+.rvs{color:#e8a33d;letter-spacing:2px;font-size:16px}
+.rvc p{margin:12px 0 0;color:#444;font-size:15.5px;line-height:1.65}
 /* mobile */
 .mnav{position:fixed;top:0;left:0;bottom:0;width:86%;max-width:360px;background:#fff;z-index:50;transform:translateX(-100%);transition:transform .3s;overflow:auto;padding:18px 22px}.mnav.on{transform:none}
 .mnav a,.mnav summary{display:block;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px}.mnav details a{padding-left:16px;font-size:15.5px}
