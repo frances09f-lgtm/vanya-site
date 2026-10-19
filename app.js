@@ -1,5 +1,5 @@
-/* Vanya storefront. Frontend only. Cart is kept in localStorage. */
-const BRAND = "Vanya";
+/* Dhavale storefront. Frontend only. Cart is kept in localStorage. */
+const BRAND = "Dhavale";
 const IMG = {hero:"4-hero.jpg",saree1:"5-saree.jpg",saree2:"9-saree2.jpg",saree3:"10-saree3.jpg",fabric1:"6-fabric.jpg",fabric2:"11-fabric2.jpg",fabric3:"12-fabric3.jpg",stole1:"7-stole.jpg",stole2:"13-stole2.jpg",swatch:"14-swatch.jpg",preserve:"15-preserve.jpg",workshop:"16-workshop.jpg",craft:"8-craft.jpg"};
 const FREE_SHIP = 3000, SHIP_FEE = 99;
 const FABRICS = [
