@@ -1,4 +1,4 @@
-/* Dhavale home layout theme */
+/* Suman home layout theme */
 :root{--teal:#88304a;--cream:#f7f8f3;--tx:rgba(116,80,48,.78);--bd:#745030}
 body{background:#f7f8f3;color:var(--tx);letter-spacing:.5px}
 h1,h2,h3,h4{color:var(--bd);letter-spacing:.6px}
@@ -103,3 +103,5 @@ header{position:relative}
 @media(prefers-reduced-motion:reduce){.hz .bg,.hz h1,.hz p,#app{animation:none}.hz h1,.hz p{opacity:1}.rvz{opacity:1;transform:none}}
 .fz h4{text-transform:none;letter-spacing:.6px}
 .of{display:flex;flex-direction:column;align-items:center}.of p{flex:1}
+.hzv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+@media(prefers-reduced-motion:reduce){.hzv{display:none}}
