@@ -1,4 +1,4 @@
-/* Dhavale home layout theme (overrides home, header, footer from app.js) */
+/* Suman home layout theme (overrides home, header, footer from app.js) */
 (function(){
 const I={
  user:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>',
@@ -38,7 +38,7 @@ home=function(){
  const tile=c=>`<a class="ctile" href="#/collections/${c}"><img src="${src(P.find(p=>p.cat===c).img)}" alt="${CATS[c][0]}"><span>${CATS[c][0]}</span></a>`;
  const pimg=["saree1","fabric2","craft","saree2","stole1"];
  const steps=[["Send Us Your Flowers","Pack and courier your wedding garlands or special flowers to us with care."],["We Carefully Sort the Flowers","Our team gently separates and prepares each petal and leaf."],["Fabric Is Prepared","We prepare the cloth that will carry the natural imprint of your flowers."],["Your Flowers Come to Life Again","Eco-printing transfers the colours of your flowers onto fabric."],["Receive Your Timeless Memory","Your finished piece is sent back to you as a keepsake."]];
- return `<section class="hz"><div class="bg" style="background-image:url(${IMG.hero})"></div><div><h1>${BRAND.toUpperCase()}</h1><p>Rooted in nature, made by hand</p></div></section>
+ return `<section class="hz"><div class="bg" style="background-image:url(${IMG.hero})"></div><video class="hzv" autoplay muted loop playsinline preload="metadata" poster="${IMG.hero}" aria-hidden="true"><source src="hero.mp4" type="video/mp4"></video><div><h1>${BRAND.toUpperCase()}</h1><p>Rooted in nature, made by hand</p></div></section>
  <section class="intro"><div class="in"><h2>Rooted in Nature, Crafted with Purpose</h2><p>${BRAND} is a celebration of craft, sustainability and mindful making. We turn leaves, petals and natural dyes into timeless textiles, blending age-old techniques with contemporary design, so that every piece carries a story and adds value to the wardrobes and homes it joins.</p></div></section>
  <section class="zs a"><h2 class="ct">Shop Our Collections</h2><div class="ctiles">${["saree","fabric","stole","swatch"].map(tile).join("")}</div></section>
  <section class="zs b"><div class="zw wide"><h2 class="big">Fabrics of ${BRAND}</h2><div class="fabw"><button class="arw l" data-sc="-1" aria-label="Previous">&#8249;</button><div class="fabs" id="fabs">${FABRICS.map(f=>`<a class="fabc" href="#/collections/fabric?fabric=${encodeURIComponent(f[0])}"><img loading="lazy" src="${src(f[2])}" alt="${f[0]}"><h3>${f[0]}</h3><p>${f[1]}</p></a>`).join("")}</div><button class="arw r" data-sc="1" aria-label="Next">&#8250;</button></div><div class="cta"><a class="btn" href="#/collections/fabric">Shop now</a></div></div></section>
@@ -46,7 +46,7 @@ home=function(){
  <section class="zs b"><div class="zw"><h2 class="big">Preserve with ${BRAND}</h2><div class="steps5">${steps.map((s,i)=>`<div class="st"><img loading="lazy" src="${src(pimg[i])}" alt=""><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join("")}</div><div class="cta"><a class="btn" href="#/page/preserve">Preserve your memory</a></div></div></section>
  <section class="zs b bless"><div class="zw wide"><h2 class="big">Blessings with ${BRAND}</h2><p><b>Carry the blessings of the hills, wherever you are.</b></p><p>Every <b>Blessings Stole</b> is made from floral offerings, with petals, leaves and herbs gathered in small batches and eco-printed in our studio.</p><p>Every offering is different, so every stole is too. No two pieces are identical, making each one a truly unique keepsake.</p><p>Made to order, just for you, so you can carry the blessings with you even when you cannot make the journey yourself.</p><div class="b3">${[["stole1","Fresh flowers, gathered with care"],["stole2","Petals with purpose"],["preserve","Made to wear and keep"]].map(x=>`<div><img loading="lazy" src="${src(x[0])}" alt=""><div>${x[1]}</div></div>`).join("")}</div><div class="cta"><a class="btn" href="#/product/blessings-stole">Order a stole</a></div></div></section>
  <section class="zs b"><div class="zw"><h2 class="big">Offerings of ${BRAND}</h2><div class="off3">${[["craft","Business Solutions (B2B)","Eco-printed textiles for brands and businesses","Work with us on eco-printed fabrics, custom development and small-batch production for designers, hotels and brands.","#/page/b2b","Know more"],["workshop","Workshops","Learn the art of eco-printing","Hands-on sessions in natural dyeing and eco-printing for individuals, schools and groups.","#/page/workshops","Know more"],["saree3","Gifting","Thoughtful gifts, made with purpose","Handcrafted keepsakes for weddings, festivals and corporate gifting, each one unique and sustainable.","#/page/gifting","Know more"]].map(o=>`<div class="of"><img loading="lazy" src="${src(o[0])}" alt=""><h3>${o[1]}</h3><h5>${o[2]}</h5><p>${o[3]}</p><a class="btn" href="${o[4]}">${o[5]}</a></div>`).join("")}</div></div></section>
- <section class="zs b ig"><div class="zw wide"><h2>Join our Instagram family</h2><p class="hn">@dhavalestudio</p><div class="ig4">${["saree1","fabric2","stole2","saree3"].map(k=>`<img loading="lazy" src="${src(k)}" alt="">`).join("")}</div><div class="cta"><a class="btn ic" href="#/page/contact">${I.insta}Stay tuned</a></div></div></section>
+ <section class="zs b ig"><div class="zw wide"><h2>Join our Instagram family</h2><p class="hn">@sumanstudio</p><div class="ig4">${["saree1","fabric2","stole2","saree3"].map(k=>`<img loading="lazy" src="${src(k)}" alt="">`).join("")}</div><div class="cta"><a class="btn ic" href="#/page/contact">${I.insta}Stay tuned</a></div></div></section>
  <section class="zs b"><div class="wrap center" style="max-width:960px"><h2 class="ct">What our customers say</h2><p class="rvsub">Read the latest reviews from our happy customers</p><div id="revs"></div><p><button class="btn" id="wr">Write a review</button></p><form id="rf" class="f" style="display:none;text-align:left;margin-top:20px"><div><label>Name</label><input name="n" required></div><div><label>Rating</label><select name="r"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></div><div class="full"><label>Your review</label><textarea name="t" rows="3" required></textarea></div><div class="full"><button class="btn">Submit review</button></div></form></div></section>
  <section class="zs b"><div class="faq"><h2>Frequently Asked Questions</h2>${FAQ.map(q=>`<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join("")}</div></section>
  <section class="zs b why"><h2>Why ${BRAND}</h2><div class="why6">${WHY.map(w=>`<div class="wy"><div class="t">${I[w[0]]}<span>${w[1]}</span></div><p>${w[2]}</p></div>`).join("")}</div></section>
@@ -69,5 +69,13 @@ function reveal(){
   const sib=[...el.parentNode.children].indexOf(el);el.style.setProperty("--d",Math.min(sib,6)*75+"ms");el.classList.add("rvz");io.observe(el);});
 }
 window.addEventListener("hashchange",()=>setTimeout(reveal,30));
+function hzplay(){
+ const v=document.querySelector("#app .hzv");if(!v)return;
+ if(matchMedia("(prefers-reduced-motion: reduce)").matches){v.remove();return;}
+ v.play().catch(()=>{});
+}
+window.addEventListener("hashchange",()=>setTimeout(hzplay,30));
+hzplay();
+
 reveal();
 })();
